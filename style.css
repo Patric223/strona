@@ -1,7 +1,12 @@
 body 
 {
  background: radial-gradient(#41aa8b,#000000)
+
 }
 .kazalimi {
   color: #41aa8b;
 }
+html{
+    height: 1000%;
+}
+ 
