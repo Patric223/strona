@@ -1,3 +1,7 @@
 .kazalimi {
   color: #41aa8b;
 }
+body 
+{
+ background: radial-gradient(#41aa8b,#000000)
+}
