@@ -1,52 +1,73 @@
 html {
-    height: 200%;
-  }
-  .kontaktybt {
-    background-color: #04AA6D;
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 25px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
-  .galeriabt{
-    background-color: #04AA6D;
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 25px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
-  .informacjebt{
-    background-color: #04AA6D;
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 25px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
-.indexbt {
-    background-color: #04AA6D;
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 25px;
-    margin: 4px 2px;
-    cursor: pointer;
+    height: 100000px;
+    font-family: "Roboto", system-ui;
+    font-size: 20px;
 }
- 
+
+
+
+
+
+
+.przyciski {
+    position: sticky;
+    top: 120px; 
+    display: flex; 
+    justify-content: center; 
+    padding: 10px;
+    margin: 0 auto; 
+    z-index: 1; 
+}
+body{
+    background-color: #ffcccc;
+}
+
+.przyciski a {
+    text-decoration: none;
+    color: white;
+    background-color: #04AA6D;
+    border-radius: 15px 50px ;
+    display: flex;
+    margin: 4px 2px;
+    padding: 20px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    transition: border-radius 0.5s ease;
+    transition: color 0.5 ease;
+}
+.przyciski a:hover{
+    border-radius: 20px 20px 20px 20px;
+}
+
+header {
+    height: 2000px; 
+    padding: 10px 20px;
+}
+
+section {
+    position: sticky;
+    top: 0;
+}
+.logo{
+    
+    display: flex;
+    place-items: center;
+    transform: scale(0.25);
+    height: 200px;
+    
+}
+.przyciski a:hover
+{
+background-color: #058657
+}
+.przyciski a:active
+{
+ background-color: #044d32 ;
+}
+#clock {
+    position: sticky;
+    top: 0;
+    
+
+}
