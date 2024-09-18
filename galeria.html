@@ -4,14 +4,44 @@
         <meta charset="utf-8">
         
         <link href="styles/style.css" rel="stylesheet" >
-        <title>galeria</title>
-        
+        <title>Galeria</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/ikona.ico">
     </head>
     <body>
-       
-        <h1 class="kazalimi">siemano</h1>
-        <a href="index.html" class="indexbt">główna stroba</a>
-        <a href="informacje.html" class="informacjebt">informacje</a>
-        <a href="kontakt.html" class="kontaktybt">kontakty</a>
+        
+        <script>
+            function updateClock() {
+                const now = new Date();
+                let hours = now.getHours();
+                let minutes = now.getMinutes();
+                
+                hours = hours < 10 ? '0' + hours : hours;
+                minutes = minutes < 10 ? '0' + minutes : minutes;
+                
+                document.getElementById('clock').textContent = hours + ':' + minutes;
+            }
+    
+            setInterval(updateClock, 1 * 60);
+    
+            updateClock();
+    </script>
+        
+        
+        
+        <div class="logo">
+        <img  src="images/logo2.png" />
+        </div>
+        <div id="clock">00:00</div>
+        
+        <header>
+            
+            <div class="przyciski">
+                <a href="index.html">Strona Główna</a>    
+                <a href="kontakt.html">Kontakty</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="informacje.html">Informacje</a>
+            </div>
+        </header>
     </body>
-</html>
+    </html>
