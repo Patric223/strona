@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        
+        <link href="styles/style.css" rel="stylesheet" >
+        <title>Galeria</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/ikona.ico">
+    </head>
+    <body>
+        
+        <script>
+            function updateClock() {
+                const now = new Date();
+                let hours = now.getHours();
+                let minutes = now.getMinutes();
+                let seconds = now.getSeconds();
+                hours = hours < 10 ? '0' + hours : hours;
+                minutes = minutes < 10 ? '0' + minutes : minutes;
+                seconds = seconds < 10 ? '0' + seconds : seconds;
+                document.getElementById('clock').textContent = hours + ':' + minutes + ':' + seconds;
+            }
+
+            setInterval(updateClock, 60);
+
+            updateClock()
+            
+    </script>
+    <script>
+        const images1 = [
+            "images/barwnik1.png",
+            "images/barwnik2.png",
+            "images/barwnik3.png",
+            "images/barwnik4.png",
+            "images/barwnik5.png",
+            "images/barwnik6.png",
+            "images/barwnik7.png",
+            "images/barwnik8.png",
+            "images/barwnik9.png",
+            "images/barwnik10.png",
+            "images/barwnik11.png",
+            "images/barwnik12.png",
+            "images/barwnik13.png",
+            "images/barwnik14.png",
+            "images/barwnik15.png",
+            "images/barwnik16.png",
+        ];
+
+        const images2 = [
+            "images/szklo1.png",
+            "images/szklo2.png",
+            "images/szklo3.png",
+            "images/szklo4.png",
+            "images/szklo5.png",
+            "images/szklo6.png",
+            "images/szklo7.png",
+            "images/szklo8.png",
+            "images/szklo9.png",
+            "images/szklo10.png",
+            "images/szklo11.png",
+            "images/szklo12.png",
+            "images/szklo13.png",
+            "images/szklo14.png",
+            "images/szklo15.png",
+            "images/szklo16.png",
+        ];
+
+        let currentIndex = 0;
+
+        function changeImages() {
+            const imgElement1 = document.getElementById("barwniki");
+            const imgElement2 = document.getElementById("szkla");
+
+            currentIndex = (currentIndex + 1) % images1.length;
+
+            if (imgElement1 && imgElement2) {
+                imgElement1.src = images1[currentIndex];
+                imgElement2.src = images2[currentIndex];
+            } else {
+                console.error("te czemu to nie działa many");
+            }
+        }
+
+        setInterval(changeImages, 1000);
+    </script> 
+        
+    
+    <div id="clock">00:00:00</div>
+        <div class="logo">
+        <img  src="images/logo.png" />
+        </div>
+        
+        <header>
+            
+            <div class="przyciski">
+                <a href="index.html">Strona Główna</a>    
+                <a href="informacje.html">Informacje</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="kontakt.html">Kontakty</a>
+            </div>
+
+            <div class="container">
+                <div class="item item-1"><img src="images/ikona.ico"></div>
+                <div class="item item-2"><img id="barwniki" src="images/ba1.png" title="to nie jest gif" ></div>
+                <div class="item item-3"><img id="szkla" src="images/szklo1.png" title="to nie jest gif" ></div>
+                <div class="item item-4"><img id="ciemnaszyba" src="images/szkłoprzyciemniane.png"></div>
+                <div class="item item-5"><img id="logo1" src="images/logo.png"></div>
+                <div class="item item-6"><img id="procestworzenia1" src="images/procestworzenie1.png"></div>
+                <div class="item item-7"><img id="procestworzenia2" src="images/produkcjaszyb.png"></div>
+                <div class="item item-8"><img id="procestworzenia3" src="images/produkcjaszybciemnych.png"></div>
+                <div class="item item-9"><img id="deskitło" src="images/sprucePlanks.jpg"></div>
+                
+                <div class="item item-11"><img id="szyby" src="images/szkłoczysteszyby.png"></div>
+                <div class="item item-12"><img id="szkłotło" src="images/szklo.png"></div>
+            </div>
+        </header>
+
+    </body>
+    </html>

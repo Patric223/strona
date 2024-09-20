@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        
+        <link href="styles/style.css" rel="stylesheet" >
+        <title>Szybkie-Szybki</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/ikona.ico">
+    </head>
+    <body>
+        
+        <script>
+            function updateClock() {
+                const now = new Date();
+                let hours = now.getHours();
+                let minutes = now.getMinutes();
+                let seconds = now.getSeconds();
+                hours = hours < 10 ? '0' + hours : hours;
+                minutes = minutes < 10 ? '0' + minutes : minutes;
+                seconds = seconds < 10 ? '0' + seconds : seconds;
+                document.getElementById('clock').textContent = hours + ':' + minutes + ':' + seconds;
+            }
+
+            setInterval(updateClock, 60);
+
+            updateClock()
+            
+    </script>
+        
+        
+    
+    <div id="clock">00:00:00</div>
+        <div class="logo">
+        <img  src="images/logo.png" />
+        </div>
+        
+        <header>
+            
+            <div class="przyciski">
+                <a href="index.html">Strona Główna</a>    
+                <a href="informacje.html">Informacje</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="kontakt.html">Kontakty</a>
+            </div>
+
+            <div class="treść">
+                
+                <div class="oferta">
+                    <div class="produkt-1">
+                        <div class="zdjęcie">
+                            <img class="szkłoczystezdj" src="images/szkłoczyste.png" alt="Czyste Szkło" title="Czyste Szkło" >
+                        </div>
+                        <div class="text-container">
+                            <div class="produkt-name"><h3 class="nazwa">Czyste Szkło</h3></div>
+                            <div class="produkt-description">Nasz najprostszy produkt. </div>
+                            <div class="produkt-description">Występuje również w wariancie kolorowym</div>
+                        </div>
+                        
+                    </div>
+                    <div class="produkt-2">
+                        <div class="zdjęcie"> 
+                            <img class="szybaczystazdj" src="images/szkłoczysteszyby.png" alt="Czyste Szyby" title="Czyste Szyby">
+                        </div>
+                        <div class="text-container">
+                            <div class="produkt-name"><h3 class="nazwa">Czyste Szyby</h3></div>
+                            <div class="produkt-description">nasz produkt szyb cienkich</div>
+                            <div class="produkt-description">Występuje również w wariancie kolorowym</div>
+                        </div>
+                    </div>
+                    <div class="produkt-3">
+                        <div class="zdjęcie"> 
+                            <img class="szybaprzyciemniana" src="images/szkłoprzyciemniane.png" alt="szyby przyceimniane" title="szyby przyciemniane">
+                        </div>
+                        <div class="text-container">
+                            <div class="produkt-name"><h3 class="nazwa">Przyciemniane szkło</h3></div>
+                            <div class="produkt-description">Produkt dla osób potrzebyjących nie samowitej wytrzymałości</div>
+                            <div class="produkt-description">Praktycznie nie zniszczelny sprawdzona odporność na wybuchy.</div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+                
+                
+            </div> 
+        </header>
+            
+        </body>
+        </html>
+        
