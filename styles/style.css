@@ -2,6 +2,7 @@ html {
     height: 100px;
     font-family: "Roboto", system-ui;
     font-size: 20px;
+   
 }
 .przyciski {
     position: sticky;
@@ -13,24 +14,27 @@ html {
     z-index: 1; 
     
 }
-body{
-   
+body {
     margin: 0;
     padding: 0;
     height: 200vh;
-        
     background-image: 
         url(../images/szklo.png),
         url(../images/sprucePlanks.jpg);
-            
     background-repeat: repeat, repeat;
-        
     background-position: 0 0, 0 0;
-        
-    background-attachment: scroll, fixed;    
+    background-attachment: scroll, fixed;
     background-size: 100px 100px, 70px 70px;
+    display: flex;
+    justify-content: center;
 }
 
+.wrapper {
+    max-width: 1000px; /* Ograniczenie szerokości strony do 1000px */
+    width: 100%; /* Szerokość strony dopasowana do okna przeglądarki */
+    padding: 0 15px; /* Opcjonalne marginesy wewnętrzne */
+    box-sizing: border-box; /* Uwzględnienie paddingu w szerokości */
+}
 .przyciski a {
     text-decoration: none;
     color: white;
@@ -44,10 +48,13 @@ body{
     cursor: pointer;
     transition: border-radius 0.5s ease;
     transition: color 0.5 ease;
+    
 }
 .przyciski a:hover{
     border-radius: 20px 20px 20px 20px;
+    
 }
+
 
 header {
     height: 3000px; 
@@ -255,7 +262,7 @@ background-color: #058657
 }
 .container {
     display: grid;
-    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: 300px 300px 300px  ;
     justify-items: center;
     align-items: center;
@@ -264,7 +271,8 @@ background-color: #058657
     border: 5px solid black;
     border-radius: 50px 50px 50px 50px;
     position: absolute;
-    margin-left: 350px;
+    margin: 0 auto;
+    
 }
 
 #logo1{
@@ -272,6 +280,10 @@ background-color: #058657
 }
 .item{
     max-height: 300px;
+    transition: transform 0.5s ease;
+}
+.item:hover{
+    transform: rotate(-10deg);
 }
 .item-5{
     grid-area: 2 / 1 / 3/ -3;
@@ -318,3 +330,29 @@ background-color: #058657
     
     
 }
+.item img {
+    width: 100%;
+    height: auto;
+    display: block; 
+}
+.danekontakt{
+    width: 600px;
+    margin: 0 auto ;
+    background-color: #292929;
+    padding: 20px 20px 20px 20px ;
+    border: 5px solid #6f6f6d;
+    border-radius: 50px 50px 50px 50px;
+    opacity: 0.9;
+    margin-bottom: 50px;
+}
+.mapa{
+    width: 600px;
+    margin: 0 auto ;
+    background-color: #292929;
+    padding: 20px 20px 20px 20px ;
+    border: 5px solid #6f6f6d;
+    border-radius: 50px 50px 50px 50px;
+    opacity: 0.9;
+    margin-bottom: 50px;
+}
+
