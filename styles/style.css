@@ -4,6 +4,12 @@ html {
     font-size: 20px;
    
 }
+@media (max-width: 600px) {
+    .przyciski {
+        flex-direction: column;
+    } 
+
+}
 .przyciski {
     position: sticky;
     top: 120px; 
@@ -30,10 +36,10 @@ body {
 }
 
 .wrapper {
-    max-width: 1000px; /* Ograniczenie szerokości strony do 1000px */
-    width: 100%; /* Szerokość strony dopasowana do okna przeglądarki */
-    padding: 0 15px; /* Opcjonalne marginesy wewnętrzne */
-    box-sizing: border-box; /* Uwzględnienie paddingu w szerokości */
+    max-width: 1000px; 
+    width: 100%; 
+    padding: 0 15px; 
+    box-sizing: border-box; 
 }
 .przyciski a {
     text-decoration: none;
@@ -68,10 +74,20 @@ section {
 .logo{
     display: flex;
     justify-content: center;
+    
     height: 200px;
+    
     width: auto;
+    
+
+  
     transform: translate(30px, 0px);
     
+}
+@media (max-width: 600px) {
+    .logo {
+        max-width: 80%; 
+    }
 }
 .przyciski a:hover
 {
@@ -355,4 +371,3 @@ background-color: #058657
     opacity: 0.9;
     margin-bottom: 50px;
 }
-
